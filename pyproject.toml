@@ -38,6 +38,7 @@ classifiers = [
 # ---- Main dependencies ----
 
 dependencies = [
+    "cydifflib>=1.1.0",
 ]
 
 
@@ -143,8 +144,10 @@ reportUnusedCallResult = false
 # reportUnreachable = false
 # reportAny = false
 # reportExplicitAny = false
-# reportUnknownVariableType = false
-# reportUnknownArgumentType = false
+reportUnknownVariableType = false
+reportUnknownArgumentType = false
+reportUnknownMemberType = false
+reportAttributeAccessIssue = false
 
 [tool.codespell]
 # ignore-words-list = "foo,bar"

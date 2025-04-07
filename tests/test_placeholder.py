@@ -1,3 +1,6 @@
-# Placeholder for an empty build.
-def test_placeholder():
-    assert True
+import cydifflib
+
+
+def test_cydifflib():
+    s = cydifflib.SequenceMatcher(None, ["a", "b"], ["a", "c"], autojunk=False)
+    print(s)
