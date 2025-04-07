@@ -54,13 +54,11 @@ jobs:
 
       - name: Install all dependencies
         run: uv sync --all-extras --dev
-        env:
+        # env:
           # Unclear why this should be needed since we already have a newer CMake,
           # but it seems to be needed when building cydifflib.
-          CMAKE_ARGS: "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+          # CMAKE_ARGS: "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
 
-      - name: Install all dependencies (trying again wihtout the CMAKE_ARGS)
-        run: uv sync --all-extras --dev
 
       - name: Run linting
         run: uv run python devtools/lint.py
